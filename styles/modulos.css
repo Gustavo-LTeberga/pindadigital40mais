@@ -1,0 +1,294 @@
+    /* PLAYER */
+
+    .curso-player{
+      padding:4rem 0;
+      background:
+      linear-gradient(
+        to bottom,
+        #f8fafc,
+        #ffffff
+      );
+      min-height:100vh;
+    }
+
+    .player-wrapper{
+      display:grid;
+      grid-template-columns: 1.6fr .8fr;
+      gap:2rem;
+    }
+
+    /* VIDEO AREA */
+
+    .video-card{
+      background:#fff;
+      border-radius:30px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.05);
+      box-shadow:0 20px 45px rgba(0,0,0,.06);
+    }
+
+    .video-preview{
+      position:relative;
+      width:100%;
+      aspect-ratio:16/9;
+      overflow:hidden;
+      background:#000;
+    }
+
+    .video-preview img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .play-button{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .play-circle{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:rgba(255,255,255,.15);
+      backdrop-filter:blur(10px);
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:#fff;
+      font-size:2rem;
+
+      border:1px solid rgba(255,255,255,.2);
+
+      transition:.25s;
+      cursor:pointer;
+    }
+
+    .play-circle:hover{
+      transform:scale(1.08);
+      background:rgba(255,255,255,.22);
+    }
+
+    /* CONTENT */
+
+    .video-content{
+      padding:2.2rem;
+    }
+
+    .curso-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+
+      background:rgba(26,92,46,.08);
+
+      color:var(--pinda-verde);
+
+      padding:.5rem 1rem;
+
+      border-radius:50px;
+
+      font-size:.8rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+
+      margin-bottom:1rem;
+    }
+
+    .curso-player-title{
+      font-family:'Playfair Display',serif;
+      font-size:2.3rem;
+      font-weight:900;
+      line-height:1.1;
+
+      color:var(--pinda-texto);
+
+      margin-bottom:1rem;
+    }
+
+    .curso-player-title span{
+      color:var(--pinda-verde);
+    }
+
+    .curso-player-desc{
+      color:#666;
+      line-height:1.8;
+      margin-bottom:2rem;
+    }
+
+    /* INFO */
+
+    .curso-info-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin-bottom:2rem;
+    }
+
+    .curso-info-card{
+      background:var(--pinda-cinza);
+      border-radius:20px;
+      padding:1.3rem;
+    }
+
+    .curso-info-card i{
+      color:var(--pinda-verde);
+      font-size:1.2rem;
+      margin-bottom:.8rem;
+    }
+
+    .curso-info-label{
+      font-size:.82rem;
+      color:#777;
+      margin-bottom:.2rem;
+    }
+
+    .curso-info-value{
+      font-weight:700;
+      color:#222;
+    }
+
+    /* RIGHT SIDE */
+
+    .modulos-card{
+      background:#fff;
+      border-radius:30px;
+      padding:2rem;
+      border:1px solid rgba(0,0,0,.05);
+      box-shadow:0 20px 45px rgba(0,0,0,.06);
+      height:fit-content;
+      position:sticky;
+      top:110px;
+    }
+
+    .modulos-title{
+      font-family:'Playfair Display',serif;
+      font-size:1.8rem;
+      font-weight:800;
+      margin-bottom:.5rem;
+    }
+
+    .modulos-sub{
+      color:#666;
+      margin-bottom:2rem;
+    }
+
+    /* MODULE */
+
+    .modulo-item{
+      display:flex;
+      gap:1rem;
+      padding:1rem;
+      border-radius:20px;
+      transition:.25s;
+      cursor:pointer;
+      margin-bottom:1rem;
+    }
+
+    .modulo-item:hover{
+      background:var(--pinda-cinza);
+    }
+
+    .modulo-item.active{
+      background:rgba(26,92,46,.08);
+      border:1px solid rgba(26,92,46,.1);
+    }
+
+    .modulo-number{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+
+      background:var(--pinda-verde);
+
+      color:#fff;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-weight:800;
+
+      flex-shrink:0;
+    }
+
+    .modulo-item.active .modulo-number{
+      background:var(--pinda-amarelo);
+      color:var(--pinda-texto);
+    }
+
+    .modulo-name{
+      font-weight:700;
+      margin-bottom:.4rem;
+      color:#222;
+    }
+
+    .modulo-desc{
+      color:#666;
+      font-size:.92rem;
+      line-height:1.6;
+    }
+
+    /* FOOT NOTES */
+
+    .curso-notes{
+      margin-top:2rem;
+      padding-top:2rem;
+      border-top:1px solid rgba(0,0,0,.08);
+    }
+
+    .curso-note{
+      display:flex;
+      gap:.8rem;
+      margin-bottom:1rem;
+      color:#555;
+      line-height:1.7;
+    }
+
+    .curso-note i{
+      color:var(--pinda-verde);
+      margin-top:.2rem;
+    }
+
+    @media(max-width:992px){
+
+      .player-wrapper{
+        grid-template-columns:1fr;
+      }
+
+      .modulos-card{
+        position:relative;
+        top:0;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .curso-player{
+        padding:2rem 0;
+      }
+
+      .video-content{
+        padding:1.5rem;
+      }
+
+      .modulos-card{
+        padding:1.5rem;
+      }
+
+      .curso-info-grid{
+        grid-template-columns:1fr;
+      }
+
+      .curso-player-title{
+        font-size:2rem;
+      }
+
+    }
