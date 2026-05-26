@@ -11,10 +11,15 @@
 
     * { box-sizing: border-box; }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: 'Source Sans 3', sans-serif;
       color: var(--pinda-texto);
       background: #fff;
+      overflow-x: hidden;
     }
 
     /* ───────── NAVBAR ───────── */
